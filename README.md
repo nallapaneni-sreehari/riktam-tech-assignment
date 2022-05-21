@@ -28,6 +28,7 @@ Sample User Credentials To Login :
         password : sreehari123
 
 Application Flow:
+
     i. Login with an Admin account
     2. Save the Token
     3. Use token in headers `{'Authorization' : 'Bearer <token>'}`
