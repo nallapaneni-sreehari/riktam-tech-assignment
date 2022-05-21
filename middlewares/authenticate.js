@@ -1,30 +1,6 @@
 const userService = require('../services/user');
 const jwt = require('jsonwebtoken');
 
-
-async function authenticateUser(req, res, next){
-    const email = req.body?.email;
-    const password = req.body?.password;
-
-    if(!email || !password)
-    {
-        res.status(400);
-        return res.send({status:'failed', message:'Email and Password are required'});
-    }
-    
-    const userInDb = await userModel.findOne({email:email, password:password});
-
-    console.log(`userInDb :::: `, userInDb);
-    
-    if(!userInDb || !userInDb?.length>0)
-    {
-        res.status(403);
-        return res.send({status:'failed', message:'Failed to authenticate credentials'});
-    }
-
-    next();
-}
-
 async function isAdmin(req, res, next){
 
     const token = req.headers['authorization']?.split(' ')[1];
@@ -103,7 +79,6 @@ async function validateUser(req, res, next){
 }
 
 module.exports = {
-    authenticateUser,
     isAdmin,
     validateUser
 }

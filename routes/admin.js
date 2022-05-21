@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {authenticateUser, isAdmin} = require('../middlewares/authenticate');
+const {isAdmin} = require('../middlewares/authenticate');
 const userService = require('../services/user');
 
 router.post('/addUser', isAdmin, async (req, res)=>{
