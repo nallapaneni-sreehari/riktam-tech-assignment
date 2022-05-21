@@ -1,7 +1,7 @@
 const request= require('supertest');
 const app = require('../server');
 
-const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1MzA1MzU3OH0.SX7mfvkpPfepYGRbCkhfV19WfWYJrBc2M3Utbs1MQHo';
+const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc3Rlci1hZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTMxMTYzNTF9.3qYGFavMsVtcSa02DCfbBzrvRjaW9TOOjPuB6lwXx-I';
 
 const uniqueId = Math.floor(Date.now()/1000);
 
