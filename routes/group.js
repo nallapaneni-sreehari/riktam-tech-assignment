@@ -24,7 +24,7 @@ router.post('/createGroup', validateUser, async (req, res)=>{
                 createdBy:userByToken?.email ?? ''
             };
 
-            var groupExist = await groupService.getGroupByName(group.name); //Check if user already exist with the email
+            var groupExist = await groupService.getGroupByName(group.name); //Check if group already exist with the name
 
             if(groupExist && groupExist?._id)
             {
@@ -89,7 +89,7 @@ router.get('/searchGroup/:searchstring', validateUser, async (req, res)=>{
     }
 
     try {
-        var response = await groupService.searchGroup(searchstring); //Check if user already exist with the email
+        var response = await groupService.searchGroup(searchstring);
         res.status(200).send({status:'success', message:'successfully fetched groups data', data:response});
 
     } catch (e) {
@@ -112,7 +112,7 @@ router.post('/addMemberToGroup', validateUser, async (req, res)=>{
         };
 
         try {
-            var response = await groupService.addMemberToGroup(group.groupName, group.memberEmail); //Check if user already exist with the email
+            var response = await groupService.addMemberToGroup(group.groupName, group.memberEmail);
             
             console.log(`response :::: `, response);
             
@@ -153,7 +153,7 @@ router.post('/sendMessageInGroup/:groupName', validateUser, async (req, res)=>{
                 message:req.body?.message
             };
             
-            var groupExist = await groupService.getGroupByName(message.groupName); //Check if user already exist with the email
+            var groupExist = await groupService.getGroupByName(message.groupName); //Check if group is present with the name
 
             if(!groupExist || groupExist?._id)
             {

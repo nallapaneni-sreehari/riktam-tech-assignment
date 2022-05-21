@@ -22,7 +22,9 @@ app.use('/group', groupApis);
 
 let server = app.listen(PORT, async (err)=>{
     if (err) throw err;
-    await connect();
+    
+    await connect(); //Connect to database (MongoDb)
+
     console.log('Server is running on ' + PORT);  
 });
 
