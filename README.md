@@ -16,3 +16,13 @@ STEPS TO EXECUTE TEST CASES
 API DOCUMENTATION
 
 Note: Please import the `API-PostMan-Collection.json` file into your postman desktop app and you can see the collection with the name `riktam-tech`, you can send the requests to test endpoints.
+
+Sample User Credentials To Login :
+
+    Admin:
+        email : admin@gmail.com
+        password : admin123
+
+    Normal:
+        email : sreehari@gmail.com
+        password : sreehari123
