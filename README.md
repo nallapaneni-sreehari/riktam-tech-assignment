@@ -15,4 +15,4 @@ STEPS TO EXECUTE TEST CASES
 
 API DOCUMENTATION
 
-Note: Please import the `API-PostMan-Collection.json` file into your postman desktop app or postman web app.
+Note: Please import the `API-PostMan-Collection.json` file into your postman desktop app and you can see the collection with the name `riktam-tech`, you can send the requests to test endpoints.
